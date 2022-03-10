@@ -54,7 +54,7 @@ class PriorityQueueTest{
     }
     @Test
     public void NoSuchElementException_GetNextElementOfNull(){
-//        testQueue.addAll(Arrays.asList(new Integer[] {1, 2, 3}));
+        testQueue.addAll(Arrays.asList(new Integer[] {1, 2, 3}));
         Exception exception = assertThrows(NoSuchElementException.class, ()->
         {
             testQueue.iterator().next();
