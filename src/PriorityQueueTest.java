@@ -1,5 +1,5 @@
 import java.util.*;
-import java.util. stream.Stream;
+import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 import org.junit.jupiter.api.*;
@@ -35,6 +35,7 @@ class PriorityQueueTest {
         for(Integer thing = testQueue.poll(); thing != null; thing = testQueue.poll()) {
             actual_array.add(thing);
         }
+        actual_array.add(1);
         assertEquals(Arrays.toString(correct_array), actual_array.toString());
     }
     @Test
@@ -53,7 +54,7 @@ class PriorityQueueTest {
     }
     @Test
     public void NoSuchElementException_GetNextElementOfNull(){
-        testQueue.addAll(Arrays.asList(new Integer[] {1, 2, 3}));
+//        testQueue.addAll(Arrays.asList(new Integer[] {1, 2, 3}));
         Exception exception = assertThrows(NoSuchElementException.class, ()->
         {
             testQueue.iterator().next();
