@@ -1,5 +1,4 @@
 package test.java;
-
 import java.util.*;
 import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
